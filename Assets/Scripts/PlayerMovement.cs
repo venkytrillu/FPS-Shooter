@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
         if (Physics.Raycast(transform.position, Vector3.down, out hit, charController.height / 2 * slopeForceRayLength))
             if (hit.normal != Vector3.up)
             {
-                print("OnSlope");
+                //print("OnSlope");
                 return true;
             }
 

@@ -36,4 +36,9 @@ public class UIManager : MonoBehaviour
         PanelIntro.SetActive(action);
     }
 
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }// class

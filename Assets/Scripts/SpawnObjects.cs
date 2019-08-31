@@ -5,8 +5,7 @@ using UnityEngine;
 public class SpawnObjects : MonoBehaviour
 {
     public static SpawnObjects instance;
-    int currentScore, oxyCount;
-    public float Timeleft;
+    int currentScore;
     public Terrain terrain;
     public int numberOfObjects; // number of objects to place
     [HideInInspector]
@@ -16,8 +15,6 @@ public class SpawnObjects : MonoBehaviour
     private int terrainLength; // terrain size (z)
     private int terrainPosX; // terrain position x
     private int terrainPosZ; // terrain position z
-    float timeOffset;
-    float timeEverySec = 1;
 
     private void Awake()
     {
@@ -25,15 +22,10 @@ public class SpawnObjects : MonoBehaviour
         {
             instance = this;
         }
-
-      //  bestScore.text = PlayerPrefs.GetInt(Tags.BestScore).ToString();
     }
 
     private void Start()
     {
-      //  timeOffset = Timeleft;
-       // timeTxt.text = Timeleft.ToString();
-        // terrain size x
         terrainWidth = (int)terrain.terrainData.size.x;
         // terrain size z
         terrainLength = (int)terrain.terrainData.size.z;
@@ -47,9 +39,7 @@ public class SpawnObjects : MonoBehaviour
 
     private void Update()
     {
-      //  if (gameState == GameState.play)
-         //   Timer();
-        // generate objects
+
         if (currentObjects <= numberOfObjects)
         {
             int randomNum = Random.Range(0, 2);
@@ -76,14 +66,5 @@ public class SpawnObjects : MonoBehaviour
         newObject.transform.position = pos;
     }
 
-    //void CreateOxygen(Vector3 pos)
-    //{
-    //    GameObject oxygenObj = Instantiate(capsulesPrefab, pos, Quaternion.identity);
-    //}
-
-    //void CreateCrystal(Vector3 pos)
-    //{
-    //    GameObject oxygenObj = Instantiate(cubePrefab, pos, Quaternion.identity);
-    //}
 
 } // class

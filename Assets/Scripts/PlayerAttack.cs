@@ -113,6 +113,7 @@ public class PlayerAttack : MonoBehaviour
             if (hit.transform.tag == Tags.Enemy_Tag)
             {
                 enemy = hit.transform.gameObject.transform.GetChild(0).gameObject;
+                enemy.transform.LookAt(gameObject.transform);
                 enemy.SetActive(true);
             }
             else
