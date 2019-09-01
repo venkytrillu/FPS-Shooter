@@ -25,7 +25,7 @@ public class WeaponData : MonoBehaviour
 
     public void GetWeaponData(WeaponHandler weaponHandler)
     {
-        print(weaponHandler.name);
+       // print(weaponHandler.name);
         WeaponName.text= weaponHandler.weaponName;
         WeaponRange.text = weaponHandler.weaponRange.ToString();
         BulletCycle.text = weaponHandler.bulletCycle;
@@ -34,7 +34,7 @@ public class WeaponData : MonoBehaviour
 
     public void SetWeaponData(int weaponIndex)
     {
-        print(weaponIndex);
+       // print(weaponIndex);
         WeaponManager.instance.TurnOnSelectedWeapon(weaponIndex);
         GetWeaponData(WeaponManager.instance.GetCurrentSelectedWeapon());
     }

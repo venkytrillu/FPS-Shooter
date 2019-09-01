@@ -7,6 +7,7 @@ public class WeaponManager : MonoBehaviour
     public static WeaponManager instance;
     [SerializeField]
     private WeaponHandler[] weapons;
+    [HideInInspector]
     public int current_weaponIndex = 0;
 
     private void Awake()
